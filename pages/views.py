@@ -1,11 +1,14 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 
 # index view
+# def index(request):
+#   context = {
+#     'title': 'Home'
+#   }
+#   return render(request, 'pages/index.html', context)
+
 def index(request):
-  context = {
-    'title': 'Home'
-  }
-  return render(request, 'pages/index.html', context)
+  return redirect('blog-index')
 
 # about view
 def about(request):

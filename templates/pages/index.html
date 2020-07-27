@@ -1,5 +1,37 @@
 {% extends 'layout/base.html' %}
 
 {% block content %}
-  <h1>Index Page</h1>
+  <div class="pages-index py-5 border-bottom">
+    <section class="hero">
+      <h2 class="display-3">
+        Fit Learning into your life
+      </h2>
+      <p class="lead">
+        LLBQA brings you legal knowledge from top books, statutes, and precedents, so you can learn anytime, anywhere.
+      </p>
+      <button class="btn btn-primary">
+        Start Learning
+      </button>
+    </section>
+    <section class="latest-posts mt-5">
+      <h3 class="font-weight-bold mb-3">Latest Blog Posts</h3>
+      <div class="latest-posts-grid">
+        <div class="card p-3 card-content">
+          <h3>Title - Card 1</h3>
+          <p>Medium length description with a few more words here.</p>
+          <button class="btn btn-primary card-button">Readmore</button>
+        </div>
+        <div class="card p-3 card-content">
+          <h3>Title - Card 2</h3>
+          <p>Medium length description with a few more words here.</p>
+          <button class="btn btn-primary card-button">Readmore</button>
+        </div>
+        <div class="card p-3 card-content">
+          <h3>Title - Card 3</h3>
+          <p>Medium length description with a few more words here. and alittle more contente here for reals </p>
+          <button class="btn btn-primary card-button">Readmore</button>
+        </div>
+      </div>
+    </section>
+  </div>
 {% endblock %}

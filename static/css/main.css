@@ -5,8 +5,34 @@
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
   font-family: 'Nunito Sans', sans-serif;
   color: #434343;
+  min-height: 100vh;
+}
+
+.layout {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.hero {
+  min-height: 40vh;
+  max-width: 60%;
+}
+
+.latest-posts .latest-posts-grid {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.latest-posts .card-button {
+  display: inline-block;
+}
+
+.latest-posts .card-content {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  justify-content: space-between;
 }
