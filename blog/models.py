@@ -12,9 +12,9 @@ class Tag(models.Model):
 
 # Post model
 class Post(models.Model):
-  title = models.CharField(max_length=140)
-  slug = models.CharField(max_length=140)
-  summary = models.CharField(max_length=200)
+  title = models.CharField(max_length=200)
+  slug = models.CharField(max_length=200, unique=True)
+  summary = models.CharField(max_length=200, blank=True)
   content = models.TextField()
   date_posted = models.DateField(default=timezone.now)
   author = models.ForeignKey(User, on_delete=models.CASCADE)

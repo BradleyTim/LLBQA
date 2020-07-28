@@ -1,0 +1,18 @@
+<div class="card mb-5 tags">
+  <div class="card-header bg-primary text-white font-weight-bold">
+    <div>All Blog Topics</div>
+  </div>
+  <div class="card-body">
+    {% if tags %}
+      <ul class="d-flex flex-wrap list-unstyled">
+        {% for tag in tags%}
+          <li class="mr-2 my-1">
+            <a class="text-decoration-none text-muted" href="{% url 'blog-by-tag' tag.name %}">#{{ tag.name }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="small">No Tags</p>
+    {% endif%}
+  </div>
+</div>

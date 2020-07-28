@@ -1,25 +1,22 @@
 from django.shortcuts import render, redirect
+from blog.models import Tag
 
-# index view
-# def index(request):
-#   context = {
-#     'title': 'Home'
-#   }
-#   return render(request, 'pages/index.html', context)
-
+# index page
 def index(request):
   return redirect('blog-index')
 
 # about view
 def about(request):
   context = {
-      'title': 'About Us'
+      'title': 'About Us',
+      'tags': Tag.objects.all()
   }
   return render(request, 'pages/about.html', context)
 
 # contact view
 def contact(request):
   context = {
-      'title': 'Contact Us'
+      'title': 'Contact Us',
+      'tags': Tag.objects.all()
   }
   return render(request, 'pages/contact.html', context)
