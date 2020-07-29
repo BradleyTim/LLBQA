@@ -1,1 +1,1 @@
-web: gunicorn llbqa.wsgi --log-file -
+web: gunicorn llbqa.wsgi
