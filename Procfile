@@ -1,1 +1,1 @@
-web: gunicorn llbqa.wsgi
+web: gunicorn app.wsgi
