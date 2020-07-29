@@ -10,6 +10,24 @@ body {
   min-height: 100vh;
 }
 
+body::-webkit-scrollbar {
+    width: 0.5rem;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #2C3E50;
+  outline: 1px solid slategrey;
+}
+
+img {
+  overflow-x: hidden;
+}
+
 header {
   box-shadow: 4px 3px 2px #eee;
 }

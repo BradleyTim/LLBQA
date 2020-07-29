@@ -13,6 +13,6 @@
     </ul>
     {% endif %}
     <span class="text-muted font-weight-bold small">{{ post.date_posted }}</span>
-    <div class="pt-2">{{ post.content | safe }}</div>
+    <div class="pt-2 overflow-hidden">{{ post.content | safe }}</div>
   </div>
 {% endblock %}

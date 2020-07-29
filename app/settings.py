@@ -21,7 +21,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # THIS IS NOT THE SECRET KEY USED IN PRODUCTION
-SECRET_KEY = 'r@xc-1k0i_d5d&9#bu%wa=o6g2g-oda#n#joo_x)fciv$6&(jy'
+SECRET_KEY = 'nottherealsecretkey'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -132,3 +132,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
+SUMMERNOTE_THEME = 'bs4'
