@@ -2,9 +2,9 @@
 
 {% block content %}
   <div class="card p-3 mb-5">
-    <h5 class="font-weight-bold text-capitalize">{{ post.title }}</h5>
+    <h5 class="font-weight-bold text-capitalize custom-text-color">{{ post.title }}</h5>
     {% if post.tags.all %}
-    <ul class="d-flex list-unstyled">
+    <ul class="d-flex list-unstyled mt-2">
       {% for tag in post.tags.all %}
         <li class="pr-2">
           <a class="text-muted" href="{% url 'blog-by-tag' tag.name %}">#{{ tag.name }}</a>
@@ -12,7 +12,7 @@
       {% endfor %}
     </ul>
     {% endif %}
-    <span class="text-muted font-weight-bold small">{{ post.date_posted }}</span>
-    <div class="pt-2 overflow-hidden">{{ post.content | safe }}</div>
+    <span class="text-muted font-weight-bold small mb-2">{{ post.date_posted }}</span>
+    <div class="pt-2 overflow-hidden custom-text-color">{{ post.content | safe }}</div>
   </div>
 {% endblock %}
