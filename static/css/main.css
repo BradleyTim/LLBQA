@@ -9,18 +9,19 @@
 }
 
 body {
+  font-size: 16px;
   font-family: 'Nunito Sans', sans-serif;
   color: #434343;
   min-height: 100vh;
 }
 
 body::-webkit-scrollbar {
-    width: 0.5rem;
+  width: 0.5rem;
 }
  
 body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 }
  
 body::-webkit-scrollbar-thumb {
@@ -32,8 +33,29 @@ img {
   overflow-x: hidden;
 }
 
-header {
-  box-shadow: 3px 2px 2px #888;
+/* header {
+  box-shadow: 2px 3px 4px #ccc;
+} */
+
+header.navbar {
+  padding: 7px 16px;
+}
+
+footer div p {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+ul {
+  margin: 0;
+}
+
+.content p > b > span {
+  font-weight: 600;
+}
+
+.content p > span {
+  font-size: 1.15rem !important;
 }
 
 .layout {
