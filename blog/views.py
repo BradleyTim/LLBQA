@@ -2,21 +2,23 @@ from django.shortcuts import render, get_object_or_404
 from .models import Post, Tag
 
 # Blog index view.
-def index(request):
-  context = {
-    'title': 'Blog',
-    'posts': Post.objects.order_by('date_posted')[::-1],
-    'tags': Tag.objects.all()
-  }
-  return render(request, 'blog/index.html', context)
+# def index(request):
+#   context = {
+#     'title': 'Blog',
+#     'posts': Post.objects.order_by('date_posted')[::-1],
+#     'tags': Tag.objects.all()
+#   }
+#   return render(request, 'blog/index.html', context)
 
 # Blog detail view
 def detail(request, pk, slug):
   # post = Post.objects.get(slug=slug)
   post = get_object_or_404(Post, id=pk, slug=slug)
+  full_url = f'{request.scheme}://{request.get_host()}{request.path}'
   context = {
       'title': post.title,
       'post': post,
+      'full_url': full_url,
       'tags': Tag.objects.all()
   }
   return render(request, 'blog/detail.html', context)

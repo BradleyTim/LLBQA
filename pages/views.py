@@ -1,9 +1,14 @@
-from django.shortcuts import render, redirect
-from blog.models import Tag
+from django.shortcuts import render
+from blog.models import Tag, Post
 
-# index page
+# Blog index view.
 def index(request):
-  return redirect('blog-index')
+  context = {
+    'title': 'Blog',
+    'posts': Post.objects.order_by('date_posted')[::-1],
+    'tags': Tag.objects.all()
+  }
+  return render(request, 'blog/index.html', context)
 
 # about view
 def about(request):

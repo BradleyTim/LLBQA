@@ -1,0 +1,27 @@
+{
+    "theme_color": "#2C3E50",
+    "background_color": "#2C3E50",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "app_name": "LLBQA",
+    "short_name": "LLBQA",
+    "description": "LLBQA APP",
+    "icons": [
+        {
+            "src": "/static/images/icon-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/icon-384x384.png",
+            "sizes": "384x384",
+            "type": "image/png"
+        },
+        {
+            "src": "/static/images/icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}

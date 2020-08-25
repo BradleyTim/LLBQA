@@ -50,12 +50,23 @@ ul {
   margin: 0;
 }
 
+.title {
+  font-size: 2.125rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.13em;
+  letter-spacing: normal;
+  text-transform: none;
+  margin: 0;
+}
+
 .content p > b > span {
   font-weight: 600;
 }
 
 .content p > span {
-  font-size: 1.15rem !important;
+  font-size: 1.15rem;
+  letter-spacing: 0.35px;
 }
 
 .layout {
@@ -86,6 +97,31 @@ ul {
   color: var(--text-color);
 }
 
+.index-card {
+  min-height: 13.5vh;
+}
+
+.share-container p {
+  margin: 0;
+  padding: 0;
+}
+
+.share-container > a > i {
+  font-size: 1.35rem;
+}
+
+.share-container .facebook {
+  color: #3b5998;
+}
+
+.share-container .twitter {
+  color: #00acee;
+}
+
+.share-container .whatsapp {
+  color: #075e54;
+}
+
 @media screen and (max-width: 1000px) {
   .base-layout {
     width: 100%;
@@ -95,4 +131,9 @@ ul {
   .sidebar {
     display: none;
   }
+
+  .index-card {
+    min-height: 13.5vh;
+  }
+
 }
