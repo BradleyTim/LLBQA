@@ -5,6 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- theme color -->
+  <meta name="theme-color" content="#2C3E50" />
+
+  <!-- Add to home screen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="LLBQA">
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
+
+  <!-- Add to home screen for windows phone -->
+  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
+  <meta name="msapplication-TileColor" content="#2C3E50">
+
   <!-- fontawesome icons -->
   <script src="https://kit.fontawesome.com/556c947a11.js" crossorigin="anonymous"></script>
 
@@ -21,19 +34,6 @@
 
   <!-- manifest -->
   <link rel="manifest" href="{% static 'manifest.json' %}">
-
-  <!-- theme color -->
-  <meta name="theme-color" content="#2C3E50" />
-
-  <!-- Add to home screen for Safari on iOS -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="LLBQA">
-  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png">
-
-  <!-- Add to home screen for windows phone -->
-  <meta name="msapplication-TileImage" content="images/icons/icon-144x144.png">
-  <meta name="msapplication-TileColor" content="#2C3E50">
 
 
   {% if title %}
@@ -59,7 +59,7 @@
       </div>
     </div>
   </div>
-  <div id="footer">
+  <div id="footer mt-2">
     {% include 'layout/footer.html' %}
   </div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

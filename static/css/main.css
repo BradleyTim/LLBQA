@@ -33,10 +33,6 @@ img {
   overflow-x: hidden;
 }
 
-/* header {
-  box-shadow: 2px 3px 4px #ccc;
-} */
-
 header.navbar {
   padding: 7px 16px;
 }
@@ -67,6 +63,10 @@ ul {
 .content p > span {
   font-size: 1.15rem;
   letter-spacing: 0.35px;
+}
+
+.content p > img {
+  width: 100% !important;
 }
 
 .layout {

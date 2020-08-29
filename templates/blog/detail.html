@@ -8,13 +8,13 @@
     <ul class="d-flex list-unstyled my-3">
       {% for tag in post.tags.all %}
         <li class="pr-2">
-          <a class="text-muted" href="{% url 'blog-by-tag' tag.name %}">#{{ tag.name }}</a>
+          <a class="text-info" href="{% url 'blog-by-tag' tag.name %}">#{{ tag.name }}</a>
         </li>
       {% endfor %}
     </ul>
     {% endif %}
     <div class="pt-2 overflow-hidden lead custom-text-color content">{{ post.content | safe }}</div>
-    <div class="w-100 my-4 pt-3 d-flex align-items-center border-top share-container">
+    <div class="w-100 my-4 pt-3 d-flex align-items-center share-container">
       <p class="font-weight-bold">Share:</p>
       <a class="d-inline-block mx-3 lead facebook" rel="noopener noreferrer" href="https://www.facebook.com/sharer.php?u={{full_url}}" target="_blank">
         <i class="fab fa-facebook-f"></i>
