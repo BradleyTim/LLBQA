@@ -3,18 +3,22 @@
 
 {% block content %}
   <div class="contact-page my-3">
-    <div class="card">
-      <div class="card-header text-primary font-weight-bold">
-        Contact us
-      </div>
-      <div class="card-body p-2">
-        <p class="lead">Reach out to us on Twitter, Facebook and Whatsapp.</p>
-        <form method="POST">
-          {% csrf_token %}
-          {{ contact_form | crispy }}
-          <button class="btn btn-warning" type="submit">Send</button>
-        </form>
-      </div>
+    <div class="">
+      <h3>Contact us</h3>
+      {% if form.subject.errors %}
+        <ul>
+        {% for error in form.errors %}
+            <li class="alert alert-danger"><strong>{{ error|escape }}</strong></li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+      <form method="POST">
+        {% csrf_token %}
+        {{ contact_form | crispy }}
+        <button class="btn btn-warning" type="submit">Send</button>
+      </form>
+      <div class="my-3">Or</div>
+      <p class="lead">Reach out to us on <a class="text-info" href="https://twitter.com/bradleys__">Twitter</a></p>
     </div>
   </div>
 {% endblock %}

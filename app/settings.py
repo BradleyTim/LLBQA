@@ -18,6 +18,10 @@ DEBUG = os.environ.get('DEBUG', '') != 'False'
 
 ALLOWED_HOSTS = ['llbqa.herokuapp.com', '127.0.0.1']
 
+ADMIN_NAME = os.environ.get('ADMIN_NAME')
+ADMIN_EMAIL = os.environ.get('ADMIN_EMAIL')
+ADMINS = [(ADMIN_NAME, ADMIN_EMAIL)]
+
 
 # Application definition
 
@@ -137,3 +141,11 @@ if DEBUG is False:
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# email settings
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

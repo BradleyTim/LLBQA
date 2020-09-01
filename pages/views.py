@@ -1,5 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
 from blog.models import Tag, Post
 from pages.forms import ContactForm
 from pages.models import Contact
@@ -28,10 +30,14 @@ def contact(request):
     if contact_form.is_valid():
       name = contact_form.cleaned_data.get('name')
       email = contact_form.cleaned_data.get('email')
+      subject = contact_form.cleaned_data.get('subject')
       message = contact_form.cleaned_data.get('message')
 
       contact_form_message = Contact(name=name, email=email, message=message)
       contact_form_message.save()
+      print(settings.ADMIN_EMAIL)
+      recipients = [settings.ADMIN_EMAIL]
+      send_mail(subject=subject, message=message, from_email=email, recipient_list=recipients)
       messages.info(request, 'Message was sent. we will reach you shortly. Thanks')
       return redirect('pages-contact')
     else:
