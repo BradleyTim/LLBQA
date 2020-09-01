@@ -48,10 +48,13 @@
   </div>
   <div class="container mt-3 base-layout">
     <div class="main">
+      <div id="alerts">
+        {% include 'layout/alerts.html' %}
+      </div>
       {% block content %}{% endblock %}
     </div>
     <div class="sidebar">
-      <div class="right-sidebar">
+      <div class="top">
         {% include 'layout/subscribe.html' %}
       </div>
       <div class="bottom">

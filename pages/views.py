@@ -1,5 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
 from blog.models import Tag, Post
+from pages.forms import ContactForm
+from pages.models import Contact
 
 # Blog index view.
 def index(request):
@@ -20,8 +23,24 @@ def about(request):
 
 # contact view
 def contact(request):
-  context = {
-      'title': 'Contact Us',
-      'tags': Tag.objects.all()
-  }
-  return render(request, 'pages/contact.html', context)
+  if request.method == 'POST':
+    contact_form = ContactForm(data=request.POST)
+    if contact_form.is_valid():
+      name = contact_form.cleaned_data.get('name')
+      email = contact_form.cleaned_data.get('email')
+      message = contact_form.cleaned_data.get('message')
+
+      contact_form_message = Contact(name=name, email=email, message=message)
+      contact_form_message.save()
+      messages.info(request, 'Message was sent. we will reach you shortly. Thanks')
+      return redirect('pages-contact')
+    else:
+      messages.warning(request, 'Something went wrong! Try again later.')
+      return redirect('pages-contact')
+  else:
+    context = {
+        'title': 'Contact Us',
+        'tags': Tag.objects.all(),
+        'contact_form': ContactForm()
+    }
+    return render(request, 'pages/contact.html', context)

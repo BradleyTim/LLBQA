@@ -7,7 +7,7 @@
       <ul class="d-flex flex-wrap list-unstyled">
         {% for tag in tags%}
           <li class="mr-2 my-1">
-            <a class="text-decoration-none text-muted" href="{% url 'blog-by-tag' tag.name %}">#{{ tag.name }}</a>
+            <a class="text-decoration-none text-info" href="{% url 'blog-by-tag' tag.name %}">#{{ tag.name }}</a>
           </li>
         {% endfor %}
       </ul>

@@ -28,6 +28,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'django_summernote',
     'pages.apps.PagesConfig',
     'blog.apps.BlogConfig',
@@ -124,11 +125,8 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 SUMMERNOTE_THEME = 'bs4'
-# SUMMERNOTE_CONFIG = {
-#     'toolbar': [
-#         ['fontSize', ['16', '18', '20']],
-#     ],
-# }
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # Heroku: Update database configuration from $DATABASE_URL.
 db_from_env = dj_database_url.config(conn_max_age=600)

@@ -1,13 +1,19 @@
 {% extends 'layout/base.html' %}
+{% load crispy_forms_tags %}
 
 {% block content %}
   <div class="contact-page my-3">
     <div class="card">
-      <div class="card-header bg-primary text-white font-weight-bold">
+      <div class="card-header text-primary font-weight-bold">
         Contact us
       </div>
-      <div class="card-body">
+      <div class="card-body p-2">
         <p class="lead">Reach out to us on Twitter, Facebook and Whatsapp.</p>
+        <form method="POST">
+          {% csrf_token %}
+          {{ contact_form | crispy }}
+          <button class="btn btn-warning" type="submit">Send</button>
+        </form>
       </div>
     </div>
   </div>

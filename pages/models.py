@@ -1,3 +1,13 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+# contact form model
+class Contact(models.Model):
+  name = models.CharField(max_length=140)
+  email = models.EmailField()
+  message = models.TextField()
+  created_at = models.DateField(default=timezone.now)
+  read = models.BooleanField(default=False)
+
+  def __str__(self):
+    return f'contact message from {self.name}, {self.email}'
