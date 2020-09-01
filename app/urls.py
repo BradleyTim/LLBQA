@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 
 urlpatterns = [
     path('summernote/', include('django_summernote.urls')),
+    path('captcha/', include('captcha.urls')),
     path('admin/', admin.site.urls),
     path('', include('pages.urls')),
     path('blog/', include('blog.urls')),

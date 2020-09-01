@@ -1,5 +1,6 @@
 const year = document.querySelector('#year');
 const menuBurger = document.querySelector('#menu-burger');
+const captcha = document.querySelector('#id_captcha_1');
 
 // add dynamic year to the footer
 year.textContent = new Date().getFullYear();
@@ -12,6 +13,8 @@ menuBurger.innerHTML = `
     <line x1="3" y1="18" x2="21" y2="18"></line>
   </svg>
 `;
+
+captcha.classList.add('form-control', 'mt-2');
 
 // REGISTER THE SERVICEWORKER FOR PWA CAPABILITIES
 // window.addEventListener("load", () => {
