@@ -5,13 +5,6 @@
   <div class="contact-page my-3">
     <div class="">
       <h3>Contact us</h3>
-      {% if form.subject.errors %}
-        <ul>
-        {% for error in form.errors %}
-            <li class="alert alert-danger"><strong>{{ error|escape }}</strong></li>
-        {% endfor %}
-        </ul>
-      {% endif %}
       <form method="POST">
         {% csrf_token %}
         {{ contact_form | crispy }}
@@ -19,7 +12,7 @@
         <button class="btn btn-warning" type="submit">Send</button>
       </form>
       <div class="my-3">Or</div>
-      <p class="lead">Reach out to us on <a class="text-info" href="https://twitter.com/bradleys__">Twitter</a></p>
+      <p class="lead">Reach out on <a class="text-info" href="https://twitter.com/bradleys__">Twitter</a></p>
     </div>
   </div>
 {% endblock %}

@@ -33,7 +33,7 @@ def contact(request):
       subject = contact_form.cleaned_data.get('subject')
       message = contact_form.cleaned_data.get('message')
 
-      contact_form_message = Contact(name=name, email=email, message=message)
+      contact_form_message = Contact(name=name, email=email, subject=subject, message=message)
       contact_form_message.save()
       print(settings.ADMIN_EMAIL)
       recipients = [settings.ADMIN_EMAIL]
@@ -41,8 +41,14 @@ def contact(request):
       messages.info(request, 'Message was sent. we will reach you shortly. Thanks')
       return redirect('pages-contact')
     else:
-      messages.warning(request, 'Something went wrong! Try again later.')
-      return redirect('pages-contact')
+      messages.warning(request, 'Fill the captcha correctly.')
+      # return redirect('pages-contact')
+      context = {
+        'title': 'Contact Us',
+        'tags': Tag.objects.all(),
+        'contact_form': contact_form
+      }
+      return render(request, 'pages/contact.html', context)
   else:
     context = {
         'title': 'Contact Us',
