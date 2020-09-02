@@ -14,15 +14,17 @@
     </ul>
     {% endif %}
     <div class="pt-2 overflow-hidden lead custom-text-color content">{{ post.content | safe }}</div>
-    <div class="w-100 my-4 pt-3 d-flex align-items-center share-container">
-      <p class="font-weight-bold">Share:</p>
-      <a class="d-inline-block mx-3 lead facebook" rel="noopener noreferrer" href="https://www.facebook.com/sharer.php?u={{full_url}}" target="_blank">
+    <p class="font-weight-bold lead pt-3m">Share</p>
+    <hr>
+    <div class="d-flex align-items-center share-container">
+      <!-- share -->
+      <a class="d-inline-block mr-3 facebook" rel="noopener noreferrer" href="https://www.facebook.com/sharer.php?u={{full_url}}" target="_blank">
         <i class="fab fa-facebook-f"></i>
       </a>
-      <a class="d-inline-block mr-3 lead twitter" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text={{post.title}} {{full_url}}" target="_blank">
+      <a class="d-inline-block mr-3 twitter" rel="noopener noreferrer" href="https://twitter.com/intent/tweet?text={{post.title}} {{full_url}}" target="_blank">
         <i class="fab fa-twitter"></i>
       </a>
-      <a class="d-inline-block mr-3 lead whatsapp" rel="noopener noreferrer" href="https://api.whatsapp.com/send?text={{post.title}} {{full_url}}" target="_blank">
+      <a class="d-inline-block mr-3 whatsapp" rel="noopener noreferrer" href="https://api.whatsapp.com/send?text={{post.title}} {{full_url}}" target="_blank">
         <i class="fab fa-whatsapp"></i>
       </a>
     </div>

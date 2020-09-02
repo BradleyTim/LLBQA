@@ -56,6 +56,16 @@ ul {
   margin: 0;
 }
 
+.logo {
+  max-width: 2rem;
+  padding-bottom: 0.5rem;
+}
+
+.app-title {
+  font-size: 2rem;
+  padding-bottom: 0;
+}
+
 .content p > b > span {
   font-weight: 600;
 }
@@ -98,7 +108,8 @@ ul {
 }
 
 .index-card {
-  min-height: 13.5vh;
+  min-height: 14.5vh;
+
 }
 
 .share-container p {

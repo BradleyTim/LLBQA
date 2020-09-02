@@ -1,6 +1,11 @@
-<header class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm bg-primary header-padding-7">
+{% load static %}
+
+<header class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm header-padding-7">
   <nav class="container">
-    <a class="navbar-brand font-weight-bold" href="{% url 'pages-index' %}">LLBQA</a>
+    <a class="navbar-brand font-weight-bold d-flex align-items-end" href="{% url 'pages-index' %}">
+      <!-- <img class="d-inline logo" src="{% static 'images/logo-white-lawyer.png' %}" alt="LLBQA logo"> -->
+      <span class="">BTO</span>
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span id="menu-burger"></span>
     </button>
